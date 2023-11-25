@@ -132,5 +132,8 @@
       }
     }
   },
-  "defaultProject": "QatarHackathon"
+  "defaultProject": "QatarHackathon",
+  "cli": {
+    "analytics": false
+  }
 }

@@ -1,0 +1,50 @@
+<h1 id="tableLabel">Drag n Drop</h1>
+
+<p>This component demonstrates Drag n drop data from the server.</p>
+
+<p *ngIf="!iataonerecords?.length"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="iataonerecords.length">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>type. </th>
+            <th>httpsonerecordiataorgnsapihasServerEndpoint</th>
+            <th>httpsonerecordiataorgnsapihasSupportedLanguage</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let iataonerecord of iataonerecords">
+            <td>{{ iataonerecord.id }}</td>
+            <td>{{ iataonerecord.type }}</td>
+            <td>{{ iataonerecord.httpsonerecordiataorgnsapihasServerEndpoint }}</td>
+            <td>{{ iataonerecord.httpsonerecordiataorgnsapihasSupportedLanguage }}</td>
+        </tr>
+    </tbody>
+</table>
+<!-- <div cdkDropListGroup>
+  <div class="example-container">
+    <h2>To do</h2>
+
+    <div
+      cdkDropList
+      [cdkDropListData]="todo"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+  <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+
+  <div class="example-container">
+    <h2>Done</h2>
+
+    <div
+      cdkDropList
+      [cdkDropListData]="done"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+<div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+</div>
+ -->

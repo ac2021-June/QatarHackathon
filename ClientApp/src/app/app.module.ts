@@ -9,6 +9,16 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
+import { DragndropDataComponent } from './drag-n-drop/dragndrop-data.component';
+import { IATAOneRecordDataComponent } from './iataonerecord/iataonerecord-data.component';
+import {
+  CdkDragDrop,
+  CdkDrag,
+  CdkDropList,
+  CdkDropListGroup,
+  moveItemInArray,
+  transferArrayItem,
+} from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -16,7 +26,9 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
     NavMenuComponent,
     HomeComponent,
     CounterComponent,
-    FetchDataComponent
+    FetchDataComponent,
+    DragndropDataComponent,
+    IATAOneRecordDataComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -26,7 +38,9 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
-    ])
+      { path: 'dragndrop-data', component: DragndropDataComponent },
+      { path: 'iataonerecord-data', component: IATAOneRecordDataComponent },
+    ]), CdkDropListGroup, CdkDropList, CdkDrag
   ],
   providers: [],
   bootstrap: [AppComponent]
