@@ -3,6 +3,12 @@
   margin: 50px;
   width: 100px;
 }
+.rectangle {
+  height: 200px;
+  width: 400px;
+  background-color: #555;
+  border-radius: 25px;
+}
 .circletext {
     position: absolute;
   text-align: left;
@@ -100,16 +106,4 @@ table, th, td {
   justify-content: center;
   align-items: center;
   height: 10vh; /* this makes the div take up the full height of the view */
-}
-.button {
-  background-color: #4CAF50; /* Green background */
-  border: none; /* No border */
-  color: white; /* White text */
-  padding: 15px 32px; /* Some padding */
-  text-align: center; /* Centered text */
-  text-decoration: none; /* No underline */
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer; /* Mouse pointer on hover */
 }

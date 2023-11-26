@@ -1,13 +1,16 @@
 <h1 id="tableLabel">
 </h1>
-
 <div class="center-div">
+    <img src="../../assets/2.png" height="75px" />
+</div>
+
+<!-- <div class="center-div">
     <div class="circle">
-        1        
+        1
     </div>
 
     <div class="lineDark"></div>
-    
+
     <div class="lineLight"></div>
     <div class="circleNotdone">2</div>
     <div class="lineLight"></div>
@@ -22,8 +25,8 @@
     <tr>
         <td>
             <div class="lineLight"></div>
-            <div class="circle">1</div>
-            <div class="lineDark"></div>
+            <div class="circleNotdone">1</div>
+            <div class="lineLight"></div>
         </td>
         <td>
             <div class="lineLight"></div>
@@ -36,9 +39,9 @@
             <div class="lineLight"></div>
         </td>
         <td>
-            <div class="lineLight"></div>
-            <div class="circleNotdone">4</div>
-            <div class="lineLight"></div>
+            <div class="lineDark"></div>
+            <div class="circle">4</div>
+            <div class="lineDark"></div>
         </td>
     </tr>
     <tr>
@@ -49,9 +52,7 @@
         </td>
         <td style="text-align:center">Approval</td>
     </tr>
-</table>
-<p *ngIf="!iataonerecords?.length"><em>Loading...</em></p>
-
+</table> -->
 <!-- <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="iataonerecords.length">
     <thead>
         <tr>
@@ -71,11 +72,15 @@
     </tbody>
 </table>
  -->
-<table width="100%">
+<p *ngIf="!notocrecords?.length"><em>Loading...</em></p>
+
+<table width="100%" class='table table-striped' aria-labelledby="notocrecordstab" *ngIf="notocrecords.length">
     <thead>
         <tr>
-            <td colspan="15">
-                DANGEROUS GOODS
+            <td colspan="15" style="font-size:20px;">
+                <strong>
+                    DANGEROUS GOODS
+                </strong>
             </td>
         </tr>
         <tr>
@@ -94,6 +99,7 @@
             <th>13</th>
             <th>14</th>
             <th>15</th>
+
         </tr>
         <tr>
             <th>Destination</th>
@@ -103,8 +109,11 @@
             <th>UN or ID Number</th>
             <th>Sub-risk</th>
             <th>No. of packages</th>
-            <th>Net Quantity Non-Radioactive Material</th>
-            <th>Transport Index Radioactive Material</th>
+            <th>
+                Net Quantity Non-Radioactive Material or
+                Transport Index Radioactive Material
+            </th>
+            <th>Unit of measurement</th>
             <th>Radioactive Package Category</th>
             <th>UN packing group</th>
             <th>Code</th>
@@ -122,91 +131,40 @@
         </tr>
     </thead>
 
-    <tr>
-        <td>Destination</td>
-        <td>Air Waybill Number Consignment Note</td>
-        <td>Proper shipping name</td>
-        <td>Class or Division</td>
-        <td>UN or ID Number</td>
-        <td>Sub-td</td>
-        <td>No. of packages</td>
-        <td>Net Quantity Non-Radioactive Material</td>
-        <td>Transport Index Radioactive Material</td>
-        <td>Radioactive Package Category</td>
-        <td>UN packing group</td>
-        <td>Code</td>
-        <td>CAO</td>
-        <td>
-            Loaded
-            <table>
-                <tr>
-                    <td>ULD</td>
-                    <td>Position</td>
-                </tr>
-            </table>
-        </td>
-        <td>Emergency Response Code</td>
-    </tr>
-    <!-- Add your data rows here -->
-</table>
-<br />
-<br />
-<table width="100%">
-    <thead>
-        <tr>
-            <td colspan="8">
-                SPECIAL LOAD - the person entering the Special Load details is to print their name here -> (1) Freight Agent: _____________________ (2) Pit Crew Leader: _____________________
-            </td>
-        </tr>
-        <tr>
-            <th>1</th>
-            <th>2</th>
-            <th>3</th>
-            <th>4</th>
-            <th>5</th>
-            <th>6</th>
-            <th>7</th>
-            <th>8</th>
-        </tr>
-        <tr>
-            <th>Destination</th>
-            <th>Air Waybill Number Consignment Note</th>
-            <th>Contents and Description</th>
-            <th>No. of packages</th>
-            <th>Quantity</th>
-            <th>Supplementary Information</th>
-            <th>Code</th>
-
-            <th>
+    <tbody>
+        <tr *ngFor="let notocrecord of notocrecords">
+            <td>{{ notocrecord.finalDestination }}</td>
+            <td>{{ notocrecord.airWaybillNumber}}</td>
+            <td>{{ notocrecord.properShippingName}}</td>
+            <td>{{ notocrecord.hazardClassificationId}}</td>
+            <td>{{ notocrecord.unNumber}}</td>
+            <td>{{ notocrecord.additionalHazardClassificationId}}</td>
+            <td>1</td>
+            <td>{{notocrecord.transportIndexNumericdpback}}</td>
+            <td>Kg</td>
+            <td>Radioactive Package Category</td>
+            <td>{{ notocrecord.packagingDangerLevelCode}}</td>
+            <td>Code</td>
+            <td>{{ notocrecord.cargoAircraftOnly}}</td>
+            <td>
                 Loaded
                 <table>
                     <tr>
-                        <td>ULD</td>
-                        <td>Position</td>
+                        <td>{{ notocrecord.uldNumber}}</td>
+                        <td>{{ notocrecord.locationOnAircraft}}</td>
                     </tr>
                 </table>
-            </th>
-
+            </td>
+            <td>Emergency Response Code</td>
         </tr>
-    </thead>
-
-    <tr>
-        <td>Destination</td>
-        <td>Air Waybill Number Consignment Note</td>
-        <td>Contents and Description</td>
-        <td>No. of packages</td>
-        <td>Quantity</td>
-        <td>Supplementary Information</td>
-        <td>Code</td>
-        <td>
-            Loaded
-            <table>
-                <tr>
-                    <td>ULD</td>
-                    <td>Position</td>
-                </tr>
-            </table>
-        </td>
-    </tr>
+    </tbody>
     <!-- Add your data rows here -->
 </table>
+<br />
+<br />
+<div class="center-div">
+    <input type="submit" value="Submit" style="background-color: #00778F; width: 200px; color: white; height: 50px;text-decoration-color: white">
+    <p style="width: 50px"></p><input type="submit" value="Refuse" style="background-color: red; color: white; width: 200px; height: 50px;text-decoration-color: white">
+</div>
+
+

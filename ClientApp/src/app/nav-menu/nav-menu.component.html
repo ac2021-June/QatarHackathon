@@ -18,20 +18,21 @@
                     <li class="nav-item"
                         [routerLinkActive]="['link-active']"
                         [routerLinkActiveOptions]="{ exact: true }">
-                        <a class="nav-link text-dark" [routerLink]="['/']">Home</a>
+                        <a class="nav-link text-dark" [routerLink]="['/']">Acceptance</a>
+                    </li>
+                    <!--  <li class="nav-item" [routerLinkActive]="['link-active']">
+         <a class="nav-link text-dark" [routerLink]="['/counter']">Counter</a>
+     </li> -->
+                    <li class="nav-item" [routerLinkActive]="['link-active']">
+                        <a class="nav-link text-dark" [routerLink]="['/iataonerecord-data']">Build-Up</a>
                     </li>
                     <li class="nav-item" [routerLinkActive]="['link-active']">
-                        <a class="nav-link text-dark" [routerLink]="['/counter']">Counter</a>
+                        <a class="nav-link text-dark" [routerLink]="['/fetch-data']" >Planning</a>
                     </li>
                     <li class="nav-item" [routerLinkActive]="['link-active']">
-                        <a class="nav-link text-dark" [routerLink]="['/fetch-data']">Fetch data</a>
+                        <a class="nav-link text-dark" [routerLink]="['/notocrecord-data']">Approval</a>
                     </li>
-                    <li class="nav-item" [routerLinkActive]="['link-active']">
-                        <a class="nav-link text-dark" [routerLink]="['/notocrecord-data']">NOTOC Record data</a>
-                    </li>
-                    <li class="nav-item" [routerLinkActive]="['link-active']">
-                        <a class="nav-link text-dark" [routerLink]="['/iataonerecord-data']">IATA One Record data</a>
-                    </li>
+
                 </ul>
             </div>
         </div>

@@ -1,24 +1,100 @@
-<h1 id="tableLabel">Weather forecast</h1>
+<h1 id="tableLabel">
+</h1>
+<div class="center-div">
+    <img src="../../assets/3.png" height="75px" />
+</div>
+<p *ngIf="!notocrecords?.length"><em>Loading...</em></p>
 
-<p>This component demonstrates fetching data from the server.</p>
+<table width="100%" class='table table-striped' aria-labelledby="notocrecordstab" *ngIf="notocrecords.length">
+    <thead>
+        <tr>
+            <td colspan="15" style="font-size:20px;">
+                <strong>
+                    DANGEROUS GOODS
+                </strong>
+            </td>
+        </tr>
+        <tr>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+            <th>7</th>
+            <th>8</th>
+            <th>9</th>
+            <th>10</th>
+            <th>11</th>
+            <th>12</th>
+            <th>13</th>
+            <th>14</th>
+            <th>15</th>
 
-<p *ngIf="!forecasts?.length"><em>Loading...</em></p>
+        </tr>
+        <tr>
+            <th>Destination</th>
+            <th>Air Waybill Number Consignment Note</th>
+            <th>Proper shipping name</th>
+            <th>Class or Division</th>
+            <th>UN or ID Number</th>
+            <th>Sub-risk</th>
+            <th>No. of packages</th>
+            <th>
+                Net Quantity Non-Radioactive Material or
+                Transport Index Radioactive Material
+            </th>
+            <th>Unit of measurement</th>
+            <th>Radioactive Package Category</th>
+            <th>UN packing group</th>
+            <th>Code</th>
+            <th>CAO</th>
+            <th>
+                Loaded
+                <table>
+                    <tr>
+                        <td>ULD</td>
+                        <td>Position</td>
+                    </tr>
+                </table>
+            </th>
+            <th>Emergency Response Code</th>
+        </tr>
+    </thead>
 
-<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="forecasts.length">
-  <thead>
-    <tr>
-      <th>Date</th>
-      <th>Temp. (C)</th>
-      <th>Temp. (F)</th>
-      <th>Summary</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let forecast of forecasts">
-      <td>{{ forecast.date }}</td>
-      <td>{{ forecast.temperatureC }}</td>
-      <td>{{ forecast.temperatureF }}</td>
-      <td>{{ forecast.summary }}</td>
-    </tr>
-  </tbody>
+    <tbody>
+        <tr *ngFor="let notocrecord of notocrecords">
+            <td>{{ notocrecord.finalDestination }}</td>
+            <td>{{ notocrecord.airWaybillNumber}}</td>
+            <td>{{ notocrecord.properShippingName}}</td>
+            <td>{{ notocrecord.hazardClassificationId}}</td>
+            <td>{{ notocrecord.unNumber}}</td>
+            <td>{{ notocrecord.additionalHazardClassificationId}}</td>
+            <td>1</td>
+            <td>{{notocrecord.transportIndexNumericdpback}}</td>
+            <td>Kg</td>
+            <td>Radioactive Package Category</td>
+            <td>{{ notocrecord.packagingDangerLevelCode}}</td>
+            <td>Code</td>
+            <td>{{ notocrecord.cargoAircraftOnly}}</td>
+            <td>
+                Loaded
+                <table>
+                    <tr>
+                        <td>{{ notocrecord.uldNumber}}</td>
+                        <td><input type="text" ng-value="notocrecord.locationOnAircraft"></td>
+                    </tr>
+                </table>
+            </td>
+            <td>Emergency Response Code</td>
+        </tr>
+    </tbody>
+    <!-- Add your data rows here -->
 </table>
+<br />
+<br />
+<div class="center-div">
+    <input type="submit" value="Update location" style="background-color: #00778F; color: white; width: 200px; height: 50px;text-decoration-color: white">
+</div>
+
+
