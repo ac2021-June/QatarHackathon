@@ -1,0 +1,199 @@
+<h1 id="notocrecordstab">
+</h1>
+
+<div class="center-div">
+    <div class="circle">
+        1        
+    </div>
+
+    <div class="lineDark"></div>
+    
+    <div class="lineLight"></div>
+    <div class="circleNotdone">2</div>
+    <div class="lineLight"></div>
+    <div class="lineLight"></div>
+
+    <div class="circleNotdone">3</div>
+    <div class="lineLight"></div>
+    <div class="lineLight"></div>
+    <div class="circleNotdone">4</div>
+</div>
+<!-- <table style="border: none; border-color: white">
+    <tr>
+        <td>
+            <div class="lineLight"></div>
+            <div class="circle">1</div>
+            <div class="lineDark"></div>
+        </td>
+        <td>
+            <div class="lineLight"></div>
+            <div class="circleNotdone">2</div>
+            <div class="lineLight"></div>
+        </td>
+        <td>
+            <div class="lineLight"></div>
+            <div class="circleNotdone">3</div>
+            <div class="lineLight"></div>
+        </td>
+        <td>
+            <div class="lineLight"></div>
+            <div class="circleNotdone">4</div>
+            <div class="lineLight"></div>
+        </td>
+    </tr>
+    <tr>
+        <td style="text-align:center">Acceptance</td>
+        <td style="text-align:center">Build-up</td>
+        <td style="text-align:center">
+            Planning
+        </td>
+        <td style="text-align:center">Approval</td>
+    </tr>
+</table>
+ -->
+ <p *ngIf="!notocrecords?.length"><em>Loading...</em></p>
+
+ <table width="100%" class='table table-striped' aria-labelledby="notocrecordstab" *ngIf="notocrecords.length">
+     <thead>
+         <tr>
+             <td colspan="15">
+                 DANGEROUS GOODS
+             </td>
+         </tr>
+         <tr>
+             <th>1</th>
+             <th>2</th>
+             <th>3</th>
+             <th>4</th>
+             <th>5</th>
+             <th>6</th>
+             <th>7</th>
+             <th>8</th>
+             <th>9</th>
+             <th>10</th>
+             <th>11</th>
+             <th>12</th>
+             <th>13</th>
+             <th>14</th>
+             <th>15</th>
+
+         </tr>
+         <tr>
+             <th>Destination</th>
+             <th>Air Waybill Number Consignment Note</th>
+             <th>Proper shipping name</th>
+             <th>Class or Division</th>
+             <th>UN or ID Number</th>
+             <th>Sub-risk</th>
+             <th>No. of packages</th>
+             <th>Net Quantity Non-Radioactive Material or
+             Transport Index Radioactive Material</th>
+             <th>Unit of measurement</th>
+             <th>Radioactive Package Category</th>
+             <th>UN packing group</th>
+             <th>Code</th>
+             <th>CAO</th>
+             <th>
+                 Loaded
+                 <table>
+                     <tr>
+                         <td>ULD</td>
+                         <td>Position</td>
+                     </tr>
+                 </table>
+             </th>
+             <th>Emergency Response Code</th>
+         </tr>
+     </thead>
+
+     <tbody>
+         <tr *ngFor="let notocrecord of notocrecords">
+             <td>{{ notocrecord.finalDestination }}</td>
+             <td>{{ notocrecord.airWaybillNumber}}</td>
+             <td>{{ notocrecord.properShippingName}}</td>
+             <td>{{ notocrecord.hazardClassificationId}}</td>
+             <td>{{ notocrecord.unNumber}}</td>
+             <td>{{ notocrecord.additionalHazardClassificationId}}</td>
+             <td>1</td>
+             <td>{{notocrecord.transportIndexNumericdpback}}</td>
+             <td>Kg</td>
+             <td>Radioactive Package Category</td>
+             <td>{{ notocrecord.packagingDangerLevelCode}}</td>
+             <td>Code</td>
+             <td>{{ notocrecord.cargoAircraftOnly}}</td>
+             <td>
+                 Loaded
+                 <table>
+                     <tr>
+                         <td>{{ notocrecord.uldNumber}}</td>
+                         <td>{{ notocrecord.locationOnAircraft}}</td>
+                     </tr>
+                 </table>
+             </td>
+             <td>Emergency Response Code</td>
+         </tr>
+       </tbody>
+     <!-- Add your data rows here -->
+ </table>
+<br />
+<br />
+<table width="100%">
+    <thead>
+        <tr>
+            <td colspan="8">
+                SPECIAL LOAD - the person entering the Special Load details is to print their name here -> (1) Freight Agent: _____________________ (2) Pit Crew Leader: _____________________
+            </td>
+        </tr>
+        <tr>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+            <th>7</th>
+            <th>8</th>
+        </tr>
+        <tr>
+            <th>Destination</th>
+            <th>Air Waybill Number Consignment Note</th>
+            <th>Contents and Description</th>
+            <th>No. of packages</th>
+            <th>Quantity</th>
+            <th>Supplementary Information</th>
+            <th>Code</th>
+
+            <th>
+                Loaded
+                <table>
+                    <tr>
+                        <td>ULD</td>
+                        <td>Position</td>
+                    </tr>
+                </table>
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Destination</td>
+            <td>Air Waybill Number Consignment Note</td>
+            <td>Contents and Description</td>
+            <td>No. of packages</td>
+            <td>Quantity</td>
+            <td>Supplementary Information</td>
+            <td>Code</td>
+            <td>
+                Loaded
+                <table>
+                    <tr>
+                        <td>ULD</td>
+                        <td>Position</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+    <!-- Add your data rows here -->
+</table>

@@ -16,6 +16,8 @@ import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-iataonerecord-data',
   templateUrl: './iataonerecord-data.component.html',
+  styleUrls: ['./iataonerecord-data.component.css'],
+
  /* styleUrls: ['./dragndrop-data.component.css'],*/
 
 })

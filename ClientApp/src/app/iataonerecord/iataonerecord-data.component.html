@@ -1,9 +1,55 @@
-<h1 id="tableLabel">Drag n Drop</h1>
+<h1 id="tableLabel">
+</h1>
 
-<p>This component demonstrates Drag n drop data from the server.</p>
-<div class="lineLight"></div>
+<div class="center-div">
+    <div class="circle">
+        1        
+    </div>
 
-<div class="lineLight"></div>
+    <div class="lineDark"></div>
+    
+    <div class="lineLight"></div>
+    <div class="circleNotdone">2</div>
+    <div class="lineLight"></div>
+    <div class="lineLight"></div>
+
+    <div class="circleNotdone">3</div>
+    <div class="lineLight"></div>
+    <div class="lineLight"></div>
+    <div class="circleNotdone">4</div>
+</div>
+<table style="border: none; border-color: white">
+    <tr>
+        <td>
+            <div class="lineLight"></div>
+            <div class="circle">1</div>
+            <div class="lineDark"></div>
+        </td>
+        <td>
+            <div class="lineLight"></div>
+            <div class="circleNotdone">2</div>
+            <div class="lineLight"></div>
+        </td>
+        <td>
+            <div class="lineLight"></div>
+            <div class="circleNotdone">3</div>
+            <div class="lineLight"></div>
+        </td>
+        <td>
+            <div class="lineLight"></div>
+            <div class="circleNotdone">4</div>
+            <div class="lineLight"></div>
+        </td>
+    </tr>
+    <tr>
+        <td style="text-align:center">Acceptance</td>
+        <td style="text-align:center">Build-up</td>
+        <td style="text-align:center">
+            Planning
+        </td>
+        <td style="text-align:center">Approval</td>
+    </tr>
+</table>
 <p *ngIf="!iataonerecords?.length"><em>Loading...</em></p>
 
 <!-- <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="iataonerecords.length">
@@ -24,29 +70,143 @@
         </tr>
     </tbody>
 </table>
-<!-- <div cdkDropListGroup>
-  <div class="example-container">
-    <h2>To do</h2>
-
-    <div
-      cdkDropList
-      [cdkDropListData]="todo"
-      class="example-list"
-      (cdkDropListDropped)="drop($event)">
-  <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
-    </div>
-  </div>
-
-  <div class="example-container">
-    <h2>Done</h2>
-
-    <div
-      cdkDropList
-      [cdkDropListData]="done"
-      class="example-list"
-      (cdkDropListDropped)="drop($event)">
-<div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
-    </div>
-  </div>
-</div>
  -->
+<table width="100%">
+    <thead>
+        <tr>
+            <td colspan="15">
+                DANGEROUS GOODS
+            </td>
+        </tr>
+        <tr>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+            <th>7</th>
+            <th>8</th>
+            <th>9</th>
+            <th>10</th>
+            <th>11</th>
+            <th>12</th>
+            <th>13</th>
+            <th>14</th>
+            <th>15</th>
+        </tr>
+        <tr>
+            <th>Destination</th>
+            <th>Air Waybill Number Consignment Note</th>
+            <th>Proper shipping name</th>
+            <th>Class or Division</th>
+            <th>UN or ID Number</th>
+            <th>Sub-risk</th>
+            <th>No. of packages</th>
+            <th>Net Quantity Non-Radioactive Material</th>
+            <th>Transport Index Radioactive Material</th>
+            <th>Radioactive Package Category</th>
+            <th>UN packing group</th>
+            <th>Code</th>
+            <th>CAO</th>
+            <th>
+                Loaded
+                <table>
+                    <tr>
+                        <td>ULD</td>
+                        <td>Position</td>
+                    </tr>
+                </table>
+            </th>
+            <th>Emergency Response Code</th>
+        </tr>
+    </thead>
+
+    <tr>
+        <td>Destination</td>
+        <td>Air Waybill Number Consignment Note</td>
+        <td>Proper shipping name</td>
+        <td>Class or Division</td>
+        <td>UN or ID Number</td>
+        <td>Sub-td</td>
+        <td>No. of packages</td>
+        <td>Net Quantity Non-Radioactive Material</td>
+        <td>Transport Index Radioactive Material</td>
+        <td>Radioactive Package Category</td>
+        <td>UN packing group</td>
+        <td>Code</td>
+        <td>CAO</td>
+        <td>
+            Loaded
+            <table>
+                <tr>
+                    <td>ULD</td>
+                    <td>Position</td>
+                </tr>
+            </table>
+        </td>
+        <td>Emergency Response Code</td>
+    </tr>
+    <!-- Add your data rows here -->
+</table>
+<br />
+<br />
+<table width="100%">
+    <thead>
+        <tr>
+            <td colspan="8">
+                SPECIAL LOAD - the person entering the Special Load details is to print their name here -> (1) Freight Agent: _____________________ (2) Pit Crew Leader: _____________________
+            </td>
+        </tr>
+        <tr>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+            <th>7</th>
+            <th>8</th>
+        </tr>
+        <tr>
+            <th>Destination</th>
+            <th>Air Waybill Number Consignment Note</th>
+            <th>Contents and Description</th>
+            <th>No. of packages</th>
+            <th>Quantity</th>
+            <th>Supplementary Information</th>
+            <th>Code</th>
+
+            <th>
+                Loaded
+                <table>
+                    <tr>
+                        <td>ULD</td>
+                        <td>Position</td>
+                    </tr>
+                </table>
+            </th>
+
+        </tr>
+    </thead>
+
+    <tr>
+        <td>Destination</td>
+        <td>Air Waybill Number Consignment Note</td>
+        <td>Contents and Description</td>
+        <td>No. of packages</td>
+        <td>Quantity</td>
+        <td>Supplementary Information</td>
+        <td>Code</td>
+        <td>
+            Loaded
+            <table>
+                <tr>
+                    <td>ULD</td>
+                    <td>Position</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <!-- Add your data rows here -->
+</table>

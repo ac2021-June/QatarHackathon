@@ -11,6 +11,7 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { DragndropDataComponent } from './drag-n-drop/dragndrop-data.component';
 import { IATAOneRecordDataComponent } from './iataonerecord/iataonerecord-data.component';
+import { NotocRecordDataComponent } from './notocrecord/notocrecord-data.component';
 import {
   CdkDragDrop,
   CdkDrag,
@@ -20,6 +21,7 @@ import {
   transferArrayItem,
 } from '@angular/cdk/drag-drop';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +30,8 @@ import {
     CounterComponent,
     FetchDataComponent,
     DragndropDataComponent,
-    IATAOneRecordDataComponent
+    IATAOneRecordDataComponent,
+    NotocRecordDataComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -40,6 +43,7 @@ import {
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'dragndrop-data', component: DragndropDataComponent },
       { path: 'iataonerecord-data', component: IATAOneRecordDataComponent },
+      { path: 'notocrecord-data', component: NotocRecordDataComponent },
     ]), CdkDropListGroup, CdkDropList, CdkDrag
   ],
   providers: [],

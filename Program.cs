@@ -1,9 +1,12 @@
 using AngularWebsite.Controllers;
+using QatarHackathon.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddHttpClient<IATAOneRecordController>();
+builder.Services.AddHttpClient<NotocRecordController>();
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();

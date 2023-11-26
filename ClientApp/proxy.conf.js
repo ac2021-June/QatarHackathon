@@ -8,7 +8,7 @@ const PROXY_CONFIG = [
     context: [
       "/weatherforecast",
       "/iataonerecord",
-
+      "/notocrecord",
    ],
     proxyTimeout: 10000,
     target: target,
